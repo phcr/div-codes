@@ -9,10 +9,10 @@
 
 class Database
 {
-    private static $dbName = 'Aprov' ;
-    private static $dbHost = 'localhost' ;
-    private static $dbUsername = 'root';
-    private static $dbUserPassword = 'mestringisystem';
+    private static $dbName = 'kmpass_no' ;
+    private static $dbHost = 'kmpass.no.mysql' ;
+    private static $dbUsername = 'kmpass_no';
+    private static $dbUserPassword = '03MiS-kmpass';
      
     private static $cont  = null;
      

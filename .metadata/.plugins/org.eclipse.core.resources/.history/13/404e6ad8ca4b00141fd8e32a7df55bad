@@ -1,18 +1,17 @@
-<?php
 /* The code is from a tutorial on PHP CRUD found on: http://www.startutorial.com/articles/view/php-crud-tutorial-part-1
  * Create a PHP file "database.php"; this file contains a PHP class named "Database". Throughout this application, 
  * Database handles all the stuff related to database connections, such as connecting and disconnecting. 
  * The code is using PDO for database access.
  */
-?>
+
 <?php
 
 class Database
 {
-    private static $dbName = 'Aprov' ;
+    private static $dbName = 'crud_tutorial' ;
     private static $dbHost = 'localhost' ;
     private static $dbUsername = 'root';
-    private static $dbUserPassword = 'mestringisystem';
+    private static $dbUserPassword = 'root';
      
     private static $cont  = null;
      

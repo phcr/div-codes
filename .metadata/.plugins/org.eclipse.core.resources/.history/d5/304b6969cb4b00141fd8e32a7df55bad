@@ -9,10 +9,10 @@
 
 class Database
 {
-    private static $dbName = 'Aprov' ;
+    private static $dbName = 'crud_tutorial' ;
     private static $dbHost = 'localhost' ;
     private static $dbUsername = 'root';
-    private static $dbUserPassword = 'mestringisystem';
+    private static $dbUserPassword = 'root';
      
     private static $cont  = null;
      
