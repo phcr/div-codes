@@ -37,13 +37,24 @@
 					$this->_submitted = $_GET;
 					break;
 				default:
-					throw new Exception ('Invalid input type. Vaid types are "post" and "get".');
+					throw new Exception('Invalid input type. Valid types are "post" and "get".');
 					break;
 			}
-			
 		}
+		protected function checkRequired()
+		{
+			$OK = array();
+			foreach ($this->_submitted as $name => $value) {
+				$value = is_array($value) ? $value : trim($value);
+				if (!emtpy($value)) {
+					$OK[] = $name;
+				}
+			}
+			$this->_missing = array_diff($this->_required, $OK);
+		}
+		
 	}
 		
 		
-	
-	 ?>
+		
+	?>
