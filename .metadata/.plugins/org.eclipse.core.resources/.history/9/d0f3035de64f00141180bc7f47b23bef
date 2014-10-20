@@ -1,0 +1,10 @@
+<?php
+if (filter_has_var(INPUT_POST, 'send'))
+    {
+        require_once 'Validator.php';
+        $required = array('name', 'email', 'comments');
+        $val = new Validator($required); 
+    }
+    ?>
+    <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Transitional//EN">
+   

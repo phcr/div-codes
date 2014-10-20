@@ -8,3 +8,350 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/peter/.e
 
 !ENTRY org.eclipse.core.net 1 0 2014-10-04 12:29:22.749
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.resources 4 1 2014-10-09 19:45:43.545
+!MESSAGE Problems occurred while refreshing local changes
+!SUBENTRY 1 org.eclipse.core.resources 4 1 2014-10-09 19:45:43.545
+!MESSAGE Problems occurred while refreshing local changes
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Errors occurred while refreshing resources with the local file system.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refreshResource(FileSystemResourceManager.java:923)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refresh(FileSystemResourceManager.java:904)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1699)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:167)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: The project description file (.project) for 'RemoteSystemsTempFiles' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SUBENTRY 2 org.eclipse.core.resources 4 271 2014-10-09 19:45:43.545
+!MESSAGE Errors occurred while refreshing resources with the local file system.
+!SUBENTRY 3 org.eclipse.core.resources 4 567 2014-10-09 19:45:43.545
+!MESSAGE The project description file (.project) for 'RemoteSystemsTempFiles' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.core.resources 4 568 2014-10-09 19:47:20.007
+!MESSAGE Could not write metadata for '/.org.eclipse.dltk.core.external.folders'.
+!STACK 0
+java.io.FileNotFoundException: /Applications/MAMP/htdocs/div-codes/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.dltk.core.external.folders/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:192)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:116)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.dltk.ui 4 10001 2014-10-09 19:47:20.364
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.dltk.core.ModelException: Errors occurred while refreshing resources with the local file system.
+	at org.eclipse.dltk.internal.core.BatchOperation.executeOperation(BatchOperation.java:47)
+	at org.eclipse.dltk.internal.core.ModelOperation.run(ModelOperation.java:698)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.dltk.core.DLTKCore.run(DLTKCore.java:1427)
+	at org.eclipse.dltk.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:83)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: The project description file (.project) for '.org.eclipse.dltk.core.external.folders' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SUBENTRY 1 org.eclipse.core.resources 4 271 2014-10-09 19:47:20.365
+!MESSAGE Errors occurred while refreshing resources with the local file system.
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2014-10-09 19:47:20.365
+!MESSAGE The project description file (.project) for '.org.eclipse.dltk.core.external.folders' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.wst.validation 4 0 2014-10-09 19:48:08.566
+!MESSAGE IWAE0027E Could not retrieve the validation configuration for resource  .
+!STACK 0
+java.lang.reflect.InvocationTargetException: IWAE0027E Could not retrieve the validation configuration for resource  .
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:135)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getConfiguration(ConfigurationManager.java:251)
+	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:226)
+	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
+	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1263)
+	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:797)
+	at org.eclipse.wst.validation.internal.DisabledValidatorManager$DisabledValidationFinder.findDisabledValidatorsFor(DisabledValidatorManager.java:109)
+	at org.eclipse.wst.validation.internal.DisabledValidatorManager.getDisabledValidatorsFor(DisabledValidatorManager.java:62)
+	at org.eclipse.wst.validation.ValidationFramework.getDisabledValidatorsFor(ValidationFramework.java:222)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.isValidatorDisabled(ASTProvider.java:577)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.isReconciling(ASTProvider.java:561)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.getAST(ASTProvider.java:481)
+	at org.eclipse.php.ui.editor.SharedASTProvider.getAST(SharedASTProvider.java:143)
+	at org.eclipse.php.internal.ui.editor.PHPStructuredEditor$5.run(PHPStructuredEditor.java:3039)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/ ' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:221)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1274)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:126)
+	... 15 more
+Root exception:
+org.eclipse.core.internal.resources.ResourceException: Resource '/ ' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:221)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1274)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:126)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getConfiguration(ConfigurationManager.java:251)
+	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:226)
+	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
+	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1263)
+	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:797)
+	at org.eclipse.wst.validation.internal.DisabledValidatorManager$DisabledValidationFinder.findDisabledValidatorsFor(DisabledValidatorManager.java:109)
+	at org.eclipse.wst.validation.internal.DisabledValidatorManager.getDisabledValidatorsFor(DisabledValidatorManager.java:62)
+	at org.eclipse.wst.validation.ValidationFramework.getDisabledValidatorsFor(ValidationFramework.java:222)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.isValidatorDisabled(ASTProvider.java:577)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.isReconciling(ASTProvider.java:561)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.getAST(ASTProvider.java:481)
+	at org.eclipse.php.ui.editor.SharedASTProvider.getAST(SharedASTProvider.java:143)
+	at org.eclipse.php.internal.ui.editor.PHPStructuredEditor$5.run(PHPStructuredEditor.java:3039)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.zend.php.common 1 0 2014-10-09 20:07:44.458
+!MESSAGE No response for 5886msec
+Thread[main,6,main]
+ org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+ org.eclipse.swt.widgets.Display.applicationNextEventMatchingMask(Display.java:4875)
+ org.eclipse.swt.widgets.Display.applicationProc(Display.java:5241)
+ org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+ org.eclipse.swt.internal.cocoa.NSApplication.nextEventMatchingMask(NSApplication.java:94)
+ org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3615)
+ org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+ org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+ org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+ org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+ org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+ org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+ org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+ org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+ org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+ org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+ org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+ org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+ org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+ sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+ sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+ java.lang.reflect.Method.invoke(Method.java:597)
+ org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+ org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+ org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+
+!ENTRY org.eclipse.core.resources 4 568 2014-10-09 20:26:28.730
+!MESSAGE Could not write metadata for '/.org.eclipse.dltk.core.external.folders'.
+!STACK 0
+java.io.FileNotFoundException: /Applications/MAMP/htdocs/div-codes/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.dltk.core.external.folders/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:192)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:116)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.zend.php.common 1 0 2014-10-09 20:26:29.025
+!MESSAGE No response for 7807msec
+Thread[main,6,main]
+ org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+ org.eclipse.swt.internal.cocoa.NSView.displayIfNeeded(NSView.java:142)
+ org.eclipse.swt.widgets.Control.update(Control.java:4912)
+ org.eclipse.swt.widgets.Control.update(Control.java:4897)
+ org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.subTask(ProgressMonitorDialog.java:236)
+ org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$4.subTask(ProgressMonitorJobsDialog.java:418)
+ org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$12.run(ProgressMonitorFocusJobDialog.java:361)
+ org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:294)
+ org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+ org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+ org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3946)
+ org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3623)
+ org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+ org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+ org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+ org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+ org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+ org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+ org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+ org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+ org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+ org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+ org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+ org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+ org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+ sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+ sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+ java.lang.reflect.Method.invoke(Method.java:597)
+ org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+ org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+ org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+
+!ENTRY org.eclipse.dltk.core 2 0 2014-10-09 20:27:19.904
+!MESSAGE Error decoding problem idenfier "67108964"
+
+!ENTRY org.eclipse.core.resources 4 568 2014-10-09 20:31:30.639
+!MESSAGE Could not write metadata for '/.org.eclipse.dltk.core.external.folders'.
+!STACK 0
+java.io.FileNotFoundException: /Applications/MAMP/htdocs/div-codes/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.dltk.core.external.folders/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:192)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:116)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2014-10-09 20:42:32.867
+!MESSAGE Could not write metadata for '/.org.eclipse.dltk.core.external.folders'.
+!STACK 0
+java.io.FileNotFoundException: /Applications/MAMP/htdocs/div-codes/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.dltk.core.external.folders/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:192)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:116)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.zend.php.common 1 0 2014-10-09 20:44:11.780
+!MESSAGE No response for 5842msec
+Thread[main,6,main]
+ org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+ org.eclipse.swt.internal.cocoa.NSBezierPath.fillRect(NSBezierPath.java:121)
+ org.eclipse.swt.widgets.Control.fillBackground(Control.java:1319)
+ org.eclipse.swt.widgets.Control.fillBackground(Control.java:1271)
+ org.eclipse.swt.widgets.Composite.drawBackground(Composite.java:357)
+ org.eclipse.swt.widgets.Canvas.drawBackground(Canvas.java:140)
+ org.eclipse.swt.widgets.Shell.drawBackground(Shell.java:818)
+ org.eclipse.swt.widgets.Widget.drawRect(Widget.java:730)
+ org.eclipse.swt.widgets.Canvas.drawRect(Canvas.java:162)
+ org.eclipse.swt.widgets.Display.windowProc(Display.java:5473)
+ org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+ org.eclipse.swt.widgets.Display.applicationNextEventMatchingMask(Display.java:4875)
+ org.eclipse.swt.widgets.Display.applicationProc(Display.java:5241)
+ org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+ org.eclipse.swt.internal.cocoa.NSApplication.nextEventMatchingMask(NSApplication.java:94)
+ org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3615)
+ org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+ org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+ org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+ org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+ org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+ org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+ org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+ org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+ org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+ org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+ org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+ org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+ org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+ sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+ sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+ java.lang.reflect.Method.invoke(Method.java:597)
+ org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+ org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+ org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+
+!ENTRY org.eclipse.core.resources 4 568 2014-10-09 21:04:15.174
+!MESSAGE Could not write metadata for '/.org.eclipse.dltk.core.external.folders'.
+!STACK 0
+java.io.FileNotFoundException: /Applications/MAMP/htdocs/div-codes/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.dltk.core.external.folders/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:192)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:116)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.zend.php.common 1 0 2014-10-09 21:11:54.419
+!MESSAGE No response for 11800msec
+Thread[main,6,main]
+ org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+ org.eclipse.swt.widgets.Display.applicationNextEventMatchingMask(Display.java:4875)
+ org.eclipse.swt.widgets.Display.applicationProc(Display.java:5241)
+ org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+ org.eclipse.swt.internal.cocoa.NSSavePanel.runModalForDirectory(NSSavePanel.java:37)
+ org.eclipse.swt.widgets.FileDialog.open(FileDialog.java:263)
+ org.eclipse.ui.internal.ide.actions.OpenLocalFileAction.run(OpenLocalFileAction.java:92)
+ org.eclipse.ui.internal.ide.actions.OpenLocalFileAction.run(OpenLocalFileAction.java:76)
+ org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:251)
+ org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:229)
+ org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+ org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+ org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+ org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+ org.eclipse.swt.widgets.Display.sendEvent(Display.java:4136)
+ org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1458)
+ org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1481)
+ org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+ org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1271)
+ org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3982)
+ org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3621)
+ org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+ org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+ org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+ org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+ org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+ org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+ org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+ org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+ org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+ org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+ org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+ org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+ org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+ sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+ sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+ java.lang.reflect.Method.invoke(Method.java:597)
+ org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+ org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+ org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+
+!ENTRY org.eclipse.dltk.core 2 0 2014-10-09 21:12:06.341
+!MESSAGE Error decoding problem idenfier "16777218"
+
+!ENTRY org.eclipse.ui.ide 4 4 2014-10-09 21:15:07.481
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2014-10-09 21:15:07.548
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2014-10-09 21:15:07.548
+!MESSAGE Could not write metadata for '/.org.eclipse.dltk.core.external.folders'.
+!STACK 0
+java.io.FileNotFoundException: /Applications/MAMP/htdocs/div-codes/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.dltk.core.external.folders/.markers (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:194)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:145)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1576)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1656)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1142)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2375)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
